@@ -21,9 +21,9 @@ def main(wf):
     wf.add_item(title="Definition for {0}:".format(args[0]), valid=False)
 
     # Vocab short definition
-    short_def = soup.find('div', id='definition').find('p', class_='short')
-    if short_def is not None:
-        short_def_text = short_def.text
+    short_def = soup.select('div#definition p.short')
+    if len(short_def) > 0:
+        short_def_text = short_def[0].text
         wf.add_item(title="[CMD+L] | {0} ...".format(short_def_text[:30]),
                     largetext=short_def_text,
                     valid=False)
@@ -48,8 +48,6 @@ def main(wf):
             def_count = def_count + 1
 
         wf.add_item(title="------------", valid=False)
-
-    soup.find()
 
     # wf.add_item(title="Nothing Found", valid=False)
 
