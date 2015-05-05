@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>me.cwchang.alfred-vocab-finder</string>
+	<string>me.cwchang.alfred-omnidict</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -23,11 +23,11 @@
 	<key>createdby</key>
 	<string>Chih-Wei (Bert) Chang</string>
 	<key>description</key>
-	<string>Vocabulary.com finder</string>
+	<string>Omni Dictionary for Alfred</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Vocabulary.com Finder</string>
+	<string>OmniDict</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -57,7 +57,7 @@
 				<key>escaping</key>
 				<integer>116</integer>
 				<key>keyword</key>
-				<string>df</string>
+				<string>od</string>
 				<key>queuedelaycustom</key>
 				<integer>5</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -71,9 +71,9 @@
 				<key>script</key>
 				<string>/usr/local/bin/python main.py {query}</string>
 				<key>subtext</key>
-				<string>blahblahblah</string>
+				<string>define the word</string>
 				<key>title</key>
-				<string>Find the word on Vocabulary.com</string>
+				<string>OmniDict</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
