@@ -3,25 +3,105 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>me.cwchang.alfred-mw-finder</string>
+	<string>me.cwchang.alfred-vocab-finder</string>
 	<key>category</key>
-	<string>Productivity</string>
+	<string>Tools</string>
 	<key>connections</key>
-	<dict/>
+	<dict>
+		<key>D87492C5-6CB1-49C6-8E41-ACB10A3F6681</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0EB24FE8-3860-44B9-94AB-E87A9E26EB84</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
 	<key>createdby</key>
 	<string>Chih-Wei (Bert) Chang</string>
 	<key>description</key>
-	<string>MW dictionary finder</string>
+	<string>Vocabulary.com finder</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>MW Finder</string>
+	<string>Vocabulary.com Finder</string>
 	<key>objects</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>116</integer>
+				<key>script</key>
+				<string>open {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>0EB24FE8-3860-44B9-94AB-E87A9E26EB84</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>116</integer>
+				<key>keyword</key>
+				<string>df</string>
+				<key>queuedelaycustom</key>
+				<integer>5</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>2</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Searching ...</string>
+				<key>script</key>
+				<string>/usr/local/bin/python main.py {query}</string>
+				<key>subtext</key>
+				<string>blahblahblah</string>
+				<key>title</key>
+				<string>Find the word on Vocabulary.com</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D87492C5-6CB1-49C6-8E41-ACB10A3F6681</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
-	<dict/>
+	<dict>
+		<key>0EB24FE8-3860-44B9-94AB-E87A9E26EB84</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>D87492C5-6CB1-49C6-8E41-ACB10A3F6681</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
 	<key>webaddress</key>
 	<string>cwchang.me</string>
 </dict>
