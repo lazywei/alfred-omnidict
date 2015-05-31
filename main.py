@@ -13,6 +13,7 @@ def main(wf):
 
     vocab_url = "http://www.vocabulary.com/dictionary/{0}".format(args[0])
     mw_url = "http://www.merriam-webster.com/dictionary/{0}".format(args[0])
+    howjsay_url = "http://www.howjsay.com/index.php?word={0}".format(args[0])
 
     r = requests.get(vocab_url)
     soup = BeautifulSoup(r.text)
@@ -59,6 +60,11 @@ def main(wf):
     wf.add_item(title="Open on MW",
                 subtitle=mw_url,
                 arg=mw_url,
+                valid=True)
+
+    wf.add_item(title="Open on Howjsay",
+                subtitle=howjsay_url,
+                arg=howjsay_url,
                 valid=True)
 
     # Send output to Alfred
