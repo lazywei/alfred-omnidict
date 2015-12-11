@@ -16,7 +16,7 @@ def main(wf):
     howjsay_url = "http://www.howjsay.com/index.php?word={0}".format(args[0])
 
     r = requests.get(vocab_url)
-    soup = BeautifulSoup(r.text)
+    soup = BeautifulSoup(r.text, "html.parser")
 
     # Show the searching word
     wf.add_item(title="Definition for {0}:".format(args[0]), valid=False)
