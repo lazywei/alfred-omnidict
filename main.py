@@ -22,7 +22,7 @@ def main(wf):
     wf.add_item(title="Definition for {0}:".format(args[0]), valid=False)
 
     # Vocab short definition
-    short_def = soup.select('div#definition p.short')
+    short_def = soup.select('div.section.blurb > p.short')
     if len(short_def) > 0:
         short_def_text = short_def[0].text
         wf.add_item(title="[CMD+L] | {0} ...".format(short_def_text[:30]),
